@@ -11,5 +11,15 @@ export function Greeting() {
 
     if (!greeting) return null;
 
-    return <h1 className="text-center mb-5">{greeting}</h1>;
+    return (
+        <>
+            <h1 className="text-center mb-2">{greeting}</h1>
+
+            {/* TODO: crie um link para  https://wp.conhecimentoia.com.br/ */}
+            <div className="text-center mb-5">
+                <h4 className="text-center"> Conheça este incrível Blog de IA</h4>
+                <a className='conhecimento' href="https://wp.conhecimentoia.com.br/">Conhecimento IA</a>
+            </div>
+        </>
+    );
 }
