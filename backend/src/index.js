@@ -10,6 +10,9 @@ const deleteItem = require('./routes/deleteItem');
 app.use(express.json());
 app.use(express.static(__dirname + '/static'));
 
+app.get('/api/hw', (req, res) => {
+    res.send('Hello World!');
+});
 app.get('/api/greeting', getGreeting);
 app.get('/api/items', getItems);
 app.post('/api/items', addItem);
@@ -27,7 +30,7 @@ db.init()
 
 const gracefulShutdown = () => {
     db.teardown()
-        .catch(() => {})
+        .catch(() => { })
         .then(() => process.exit());
 };
 
